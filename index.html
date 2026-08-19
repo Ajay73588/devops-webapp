@@ -3,10 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Web App</title>
+
+    <title>DevOpsFlow | CI/CD Automation</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello DevOps CI/CD!</h1>
-    <p>This website is deployed using GitHub, GitHub Actions and Vercel.</p>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">⚡</span>
+            DevOps<span>Flow</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pipeline">Pipeline</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="#pipeline" class="nav-button">View Pipeline →</a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    CI/CD Pipeline Operational
+                </div>
+
+                <h1>
+                    Ship Faster.<br>
+                    <span>Deploy Smarter.</span>
+                </h1>
+
+                <p>
+                    A modern automated DevOps workflow powered by
+                    GitHub, GitHub Actions, Slack, and Vercel.
+                    From code commit to production deployment.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#pipeline" class="primary-button">
+                        Explore Pipeline →
+                    </a>
+
+                    <a href="#features" class="secondary-button">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>100%</strong>
+                        <span>Automated</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>CI/CD</strong>
+                        <span>Enabled</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>24/7</strong>
+                        <span>Deployment</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pipeline Visual -->
+            <div class="pipeline-card">
+
+                <div class="card-header">
+                    <div class="window-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="card-title">
+                        deployment.yml
+                    </div>
+
+                    <div class="live">
+                        <span></span> LIVE
+                    </div>
+                </div>
+
+
+                <div class="pipeline">
+
+                    <div class="pipeline-step active">
+                        <div class="step-icon">⌘</div>
+
+                        <div>
+                            <strong>Git Push</strong>
+                            <small>Source Control</small>
+                        </div>
+
+                        <div class="check">✓</div>
+                    </div>
+
+
+                    <div class="connector">
+                        <span></span>
+                    </div>
+
+
+                    <div class="pipeline-step active">
+                        <div class="step-icon">⚙</div>
+
+                        <div>
+                            <strong>GitHub Actions</strong>
+                            <small>Continuous Integration</small>
+                        </div>
+
+                        <div class="check">✓</div>
+                    </div>
+
+
+                    <div class="connector">
+                        <span></span>
+                    </div>
+
+
+                    <div class="pipeline-step active">
+                        <div class="step-icon">💬</div>
+
+                        <div>
+                            <strong>Slack</strong>
+                            <small>ChatOps Notification</small>
+                        </div>
+
+                        <div class="check">✓</div>
+                    </div>
+
+
+                    <div class="connector">
+                        <span></span>
+                    </div>
+
+
+                    <div class="pipeline-step active">
+                        <div class="step-icon">▲</div>
+
+                        <div>
+                            <strong>Vercel</strong>
+                            <small>Production Deployment</small>
+                        </div>
+
+                        <div class="check">✓</div>
+                    </div>
+
+                </div>
+
+                <div class="deployment-status">
+                    <span class="pulse"></span>
+
+                    <div>
+                        <strong>Deployment successful</strong>
+                        <small>Production environment is up to date</small>
+                    </div>
+
+                    <span class="time">just now</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features" id="features">
+
+            <div class="section-heading">
+                <span>THE DEVOPS WORKFLOW</span>
+
+                <h2>
+                    Everything automated.
+                    <span>Nothing manual.</span>
+                </h2>
+
+                <p>
+                    This project demonstrates how modern development teams
+                    automate the journey from source code to production.
+                </p>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon purple">⌘</div>
+
+                    <h3>Version Control</h3>
+
+                    <p>
+                        Git and GitHub provide reliable source control,
+                        collaboration, and version history.
+                    </p>
+
+                    <span class="tag">GIT + GITHUB</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon blue">⚙</div>
+
+                    <h3>Continuous Integration</h3>
+
+                    <p>
+                        GitHub Actions automatically verifies the application
+                        whenever new code is pushed.
+                    </p>
+
+                    <span class="tag">GITHUB ACTIONS</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon green">💬</div>
+
+                    <h3>ChatOps</h3>
+
+                    <p>
+                        Build status is instantly communicated to the team
+                        through Slack notifications.
+                    </p>
+
+                    <span class="tag">SLACK</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon orange">▲</div>
+
+                    <h3>Continuous Deployment</h3>
+
+                    <p>
+                        Every successful update can automatically reach
+                        the production environment through Vercel.
+                    </p>
+
+                    <span class="tag">VERCEL</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Pipeline Section -->
+        <section class="pipeline-section" id="pipeline">
+
+            <div class="section-heading">
+                <span>AUTOMATED DELIVERY</span>
+
+                <h2>
+                    From commit to
+                    <span>production.</span>
+                </h2>
+            </div>
+
+
+            <div class="flow">
+
+                <div class="flow-item">
+                    <div class="flow-number">01</div>
+                    <h3>Code</h3>
+                    <p>Developer pushes changes to GitHub.</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-item">
+                    <div class="flow-number">02</div>
+                    <h3>Build</h3>
+                    <p>GitHub Actions automatically runs the CI workflow.</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-item">
+                    <div class="flow-number">03</div>
+                    <h3>Notify</h3>
+                    <p>Slack receives the build status automatically.</p>
+                </div>
+
+                <div class="flow-line"></div>
+
+                <div class="flow-item">
+                    <div class="flow-number">04</div>
+                    <h3>Deploy</h3>
+                    <p>Vercel publishes the latest version online.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about" id="about">
+
+            <div class="about-card">
+
+                <div>
+                    <span class="mini-label">VIRTUAL LAB EXPERIMENT</span>
+
+                    <h2>
+                        End-to-End DevOps
+                        <span>Automation</span>
+                    </h2>
+
+                    <p>
+                        This project demonstrates Continuous Integration,
+                        ChatOps, Continuous Deployment, version control,
+                        and cloud-based hosting in a real-world workflow.
+                    </p>
+                </div>
+
+                <div class="about-badge">
+                    <strong>CI</strong>
+                    <span>Continuous<br>Integration</span>
+                </div>
+
+                <div class="about-badge">
+                    <strong>CD</strong>
+                    <span>Continuous<br>Deployment</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            ⚡ DevOps<span>Flow</span>
+        </div>
+
+        <p>
+            Built with Git • GitHub Actions • Slack • Vercel
+        </p>
+
+        <div class="footer-status">
+            <span></span>
+            All systems operational
+        </div>
+
+    </footer>
+
 </body>
 </html>
