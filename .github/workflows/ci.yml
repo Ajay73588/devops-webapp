@@ -19,3 +19,23 @@ jobs:
 
       - name: Display Build Message
         run: echo "Build Success!"
+
+      - name: Notify Slack - Success
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST \
+            -H 'Content-type: application/json' \
+            --data '{"text":"✅ CI Pipeline Successful! Build completed successfully for devops-webapp."}' \
+            "$SLACK_WEBHOOK_URL"
+
+      - name: Notify Slack - Failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST \
+            -H 'Content-type: application/json' \
+            --data '{"text":"❌ CI Pipeline Failed! Please check the GitHub Actions build logs for devops-webapp."}' \
+            "$SLACK_WEBHOOK_URL"
