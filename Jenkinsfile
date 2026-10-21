@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         APP_NAME = 'devops-webapp'
-        IMAGE_TAG = '$BUILD_NUMBER'
     }
 
     stages {
@@ -39,14 +38,14 @@ pipeline {
             steps {
                 echo 'Deploying application to K3s cluster...'
                 sh '''
-                    # Import image into K3s containerd
-                    docker save devops-webapp:latest | ctr -n k8s.io images import -
+                    # Import image into K3s containerd using sudo k3s ctr
+                    docker save devops-webapp:latest | sudo /usr/local/bin/k3s ctr images import -
 
                     # Apply Kubernetes manifests
                     kubectl apply -f k8s/deployment.yaml
 
                     # Verify rollout status
-                    kubectl rollout status deployment/devops-webapp --timeout=60s
+                    kubectl rollout status deployment/devops-webapp --timeout=120s
                 '''
             }
         }
