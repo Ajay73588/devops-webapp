@@ -41,8 +41,8 @@ pipeline {
                     # Import image into K3s containerd using sudo k3s ctr
                     docker save devops-webapp:latest | sudo /usr/local/bin/k3s ctr images import -
 
-                    # Apply Kubernetes manifests
-                    kubectl apply -f k8s/deployment.yaml
+                    # Apply Kubernetes manifests without openapi download timeout
+                    kubectl apply -f k8s/deployment.yaml --validate=false
 
                     # Verify rollout status
                     kubectl rollout status deployment/devops-webapp --timeout=120s
